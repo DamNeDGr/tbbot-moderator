@@ -11,7 +11,7 @@ bot.on('message', async (msg) => {
         return bot.sendMessage(chatId, 'Пожалуйста, отправьте описание и изображение ряженого бойца');
     }
 
-    const adminMessage = `🚀 **Новая наводка**\nТекст:\n${caption || ''}\nОт @${msg.from.username}`;
+    const adminMessage = `🚀 **Новая наводка**\nТекст: ${caption || ''}\nОт @${msg.from.username}`;
 
     if (photo) {
         const fileId = photo[photo.length - 1].file_id;
